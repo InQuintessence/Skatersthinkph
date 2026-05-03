@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Skatersthinkph </title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        .navbar {
+            background-color: #17223a;
+            font-family: Times New Roman;
+            padding-right: 15px;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-tab {
+            font-family: Times New Roman;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .categories {
+            background-color: darkblue;
+            padding: 15px 40px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+        }
+
+        .categories li a {
+            color: #e11d48;
+            margin-right: 0;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            display: inline-block
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+        }
+
+        li a {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+        button {
+            background-color: #e11d48;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+
+        button a {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 15px;
+
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: Times New Roman;
+            margin-top: 60px;
+            font-size: 32px;
+            color: white;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            padding: 0 5%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h2 {
+            font-size: 48px;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-family: Times New Roman;
+            color: white;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            text-align: left;
+            margin: 0;
+            line-height: 1.6;
+            color: white;
+        }
+
+        .hero-stats {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-box {
+            background-color: darkblue;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e11d48;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+        }
+
+        .carousel {
+            width: 80%;
+            margin: 0 auto 50px auto;
+            position: relative;
+        }
+
+        .carousel-inner {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding-bottom: 20px;
+            scrollbar-width: none;
+        }
+
+        .carousel-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: darkblue;
+            border-radius: 15px;
+            padding: 20px;
+            flex: 1 1 0;
+            aspect-ratio: 1 / 1.1;
+            color: white;
+            text-align: center;
+            font-family: Times New Roman;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .project-card h3 {
+            color: #e11d48;
+            margin-top: 0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar-container {
+            width: 90%;
+            height: 10px;
+            background-color: rgb(53, 82, 82);
+            border-radius: 5px;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background-color: #e11d48;
+        }
+
+        .progress-text {
+            font-size: 14px;
+            color: #e11d48;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .project-card button {
+            background-color: #e11d48;
+            margin: 0;
+            width: 130px;
+            margin-top: auto;
+            border-radius: 10px;
+            padding: 10px;
+            border: none;
+        }
+
+        .project-card button a {
+            color: darkblue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .carousel-nav a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: rgb(53, 82, 82);
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+
+        .carousel-nav a:hover {
+            background-color: darkblue;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px 15px;
+                gap: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            li a {
+                margin-right: 15px;
+                font-size: 16px;
+            }
+
+            button {
+                margin: 5px;
+                width: auto;
+                min-width: 110px;
+                padding: 12px 15px;
+            }
+
+            button a {
+                text-decoration: none;
+            }
+
+            .nav-tab {
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+
+            .categories {
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 15px;
+                justify-content: center;
+                border-radius: 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .categories li {
+                margin-bottom: 0;
+            }
+
+            .categories li a {
+                font-size: 16px;
+                text-align: center;
+                display: block;
+            }
+
+            .section-title {
+                margin-top: 40px;
+                font-size: 26px;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                margin-top: 30px;
+                padding: 0 15px;
+                gap: 25px;
+            }
+
+            .hero-text h2 {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            .hero-text p {
+                text-align: center;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                gap: 15px;
+            }
+
+            .stat-box {
+                padding: 15px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+
+            .stat-label {
+                font-size: 14px;
+            }
+
+            .carousel {
+                width: 90%;
+            }
+
+            .slide {
+                flex-direction: column;
+            }
+
+            .project-card {
+                aspect-ratio: auto;
+                min-height: 250px;
+                width: 100%;
+                padding: 25px 20px;
+            }
+
+            .project-card h3 {
+                font-size: 22px;
+            }
+
+            .project-card p {
+                font-size: 16px;
+            }
+
+            .project-card button {
+                width: 100%;
+                max-width: 200px;
+                align-self: center;
+                margin-top: auto;
+            }
+
+            .project-card[style*="visibility: hidden"] {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Skatersthinkph
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
+        <ul class="menu">
+            <li> <a href="index.html">Home</a></li>
+            <li><a href="projects.html"> Browse Projects</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tos.html">Terms of Service</a></li>
+            <button><a href="publish.html">Publish</a></button>
+            <button><a href="signup.html">Sign Up</a></button>
+            <button><a href="#">Sign In</a></button>
+        </ul>
+    </nav>
+
+    <nav class="nav-tab">
+        <ul class="categories">
+            <li> <a href="#">Research and Journals</a></li>
+            <li> <a href="#">Inventions</a></li>
+            <li> <a href="#">Books</a></li>
+            <li> <a href="#">Screenplays</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <div class="hero-text">
+            <h2>This is where great ideas begin</h2>
+            <p>This is where you may browse through projects
+                <br> ranging from science to the arts
+            </p>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-box">
+                <span class="stat-number" data-target="150">0</span>
+                <span class="stat-label">Research & Journals</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="320">0</span>
+                <span class="stat-label">Inventions</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="850">0</span>
+                <span class="stat-label">Books</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="120">0</span>
+                <span class="stat-label">Screenplays</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research and Journals -->
+    <h2 class="section-title">Research and Journals</h2>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="slide" id="research-slide-1">
+                <div class="project-card">
+                    <h3>Quantum Computing Advances</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 75%;"></div>
+                    </div>
+                    <div class="progress-text">75% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Ocean Acidification Study</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 42%;"></div>
+                    </div>
+                    <div class="progress-text">42% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Microplastics in Rainwater</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 88%;"></div>
+                    </div>
+                    <div class="progress-text">88% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+            <div class="slide" id="research-slide-2">
+                <div class="project-card">
+                    <h3>Cognitive Behavioral Models</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 25%;"></div>
+                    </div>
+                    <div class="progress-text">25% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Graphene Solar Panels</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 90%;"></div>
+                    </div>
+                    <div class="progress-text">90% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>AI in Medical Diagnoses</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 60%;"></div>
+                    </div>
+                    <div class="progress-text">60% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <a href="#research-slide-1">1</a>
+            <a href="#research-slide-2">2</a>
+        </div>
+    </div>
+
+    <!-- Inventions -->
+    <h2 class="section-title">Inventions</h2>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="slide" id="inventions-slide-1">
+                <div class="project-card">
+                    <h3>Smart Water Purifier</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 30%;"></div>
+                    </div>
+                    <div class="progress-text">30% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Portable Wind Turbine</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 80%;"></div>
+                    </div>
+                    <div class="progress-text">80% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Biodegradable Plastic</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 55%;"></div>
+                    </div>
+                    <div class="progress-text">55% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+            <div class="slide" id="inventions-slide-2">
+                <div class="project-card">
+                    <h3>Magnetic Levitation Skateboard</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 15%;"></div>
+                    </div>
+                    <div class="progress-text">15% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Automated Vertical Farm</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 95%;"></div>
+                    </div>
+                    <div class="progress-text">95% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Low-Cost Prosthetics</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                    </div>
+                    <div class="progress-text">70% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <a href="#inventions-slide-1">1</a>
+            <a href="#inventions-slide-2">2</a>
+        </div>
+    </div>
+
+    <!-- Books -->
+    <h2 class="section-title">Books</h2>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="slide" id="books-slide-1">
+                <div class="project-card">
+                    <h3>The Martian Frontier</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 45%;"></div>
+                    </div>
+                    <div class="progress-text">45% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Chronicles of the Deep</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 85%;"></div>
+                    </div>
+                    <div class="progress-text">85% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Urban Gardening Guide</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 65%;"></div>
+                    </div>
+                    <div class="progress-text">65% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+            <div class="slide" id="books-slide-2">
+                <div class="project-card">
+                    <h3>History of Skateboarding</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 100%;"></div>
+                    </div>
+                    <div class="progress-text">100% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Understanding AI Ethics</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 20%;"></div>
+                    </div>
+                    <div class="progress-text">20% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Poetry of the Cosmos</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 50%;"></div>
+                    </div>
+                    <div class="progress-text">50% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <a href="#books-slide-1">1</a>
+            <a href="#books-slide-2">2</a>
+        </div>
+    </div>
+
+    <!-- Screenplays -->
+    <h2 class="section-title">Screenplays</h2>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="slide" id="screenplays-slide-1">
+                <div class="project-card">
+                    <h3>Echoes of Tomorrow</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 12%;"></div>
+                    </div>
+                    <div class="progress-text">12% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>The Last Detective</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 77%;"></div>
+                    </div>
+                    <div class="progress-text">77% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>A Summer in Manila</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 92%;"></div>
+                    </div>
+                    <div class="progress-text">92% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+            <div class="slide" id="screenplays-slide-2">
+                <div class="project-card">
+                    <h3>Neon City Lights</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 38%;"></div>
+                    </div>
+                    <div class="progress-text">38% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Silent Symphony</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 58%;"></div>
+                    </div>
+                    <div class="progress-text">58% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Journey to the Center</h3>
+                    <p>Support this amazing project towards completion.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 82%;"></div>
+                    </div>
+                    <div class="progress-text">82% Funded</div>
+                    <button><a href="#">View</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <a href="#screenplays-slide-1">1</a>
+            <a href="#screenplays-slide-2">2</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 100; // Lower is slower
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace(/,/g, '');
+
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc).toLocaleString();
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target.toLocaleString() + '+';
+                    }
+                };
+
+                updateCount();
+            });
+        });
+    </script>
+</body>
+
+</html>

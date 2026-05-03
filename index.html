@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Skatersthinkph </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar {
+            background-color: #17223a;
+            font-family: Times New Roman;
+            padding-right: 15px;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 600;
+            color: white;
+            display: inline-block
+        }
+
+        .menu li {
+            list-style: none;
+            display: inline-block;
+
+        }
+
+        .menu li a {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+        button {
+            background-color: #e11d48;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+
+        button a {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 15px;
+
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+            padding: 0 5%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .vision-mission-container {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            color: white;
+        }
+
+        .vision,
+        .mission {
+            flex: 1;
+        }
+
+        .vision h2,
+        .mission h2 {
+            font-size: 32px;
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-family: Times New Roman;
+            color: white;
+        }
+
+        .vision ul,
+        .mission ul {
+            padding-left: 20px;
+            margin: 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .hero-stats {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-box {
+            background-color: darkblue;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e11d48;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+        }
+
+        .carousel {
+            width: 80%;
+            margin: 0 auto 50px auto;
+            position: relative;
+        }
+
+        .carousel-inner {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding-bottom: 20px;
+            scrollbar-width: none;
+        }
+
+        .carousel-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: darkblue;
+            border-radius: 15px;
+            padding: 20px;
+            flex: 1 1 0;
+            /* Ensures 3 cards equally divide the width */
+            aspect-ratio: 1 / 1;
+            /* Makes them box/square-shaped */
+            color: white;
+            text-align: center;
+            font-family: Times New Roman;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .project-card h3 {
+            color: #e11d48;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .project-card button {
+            background-color: #e11d48;
+            margin: 0;
+            width: 130px;
+        }
+
+        .project-card button a {
+            color: darkblue;
+            text-decoration: none;
+        }
+
+        .project-card-rect {
+            background-color: darkblue;
+            border-radius: 15px;
+            padding: 40px;
+            flex: 0 0 100%;
+            color: white;
+            text-align: center;
+            font-family: Times New Roman;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            min-height: 350px;
+        }
+
+        .project-card-rect h3 {
+            color: #e11d48;
+            margin-top: 0;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .project-card-rect p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 80%;
+        }
+
+        .project-card-rect button {
+            background-color: #e11d48;
+            margin: 0;
+            width: 150px;
+            padding: 12px;
+        }
+
+        .project-card-rect button a {
+            color: darkblue;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .carousel-nav a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: rgb(53, 82, 82);
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+
+        .carousel-nav a:hover {
+            background-color: darkblue;
+        }
+
+        h2 {
+            font-family: Times New Roman;
+            text-align: center;
+            color: white;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px 15px;
+                gap: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            li a {
+                margin-right: 15px;
+                font-size: 16px;
+            }
+
+            button {
+                margin: 5px;
+                width: auto;
+                min-width: 110px;
+                padding: 12px 15px;
+            }
+
+            button a {
+                text-decoration: none;
+            }
+
+            .hero-container {
+                flex-direction: column;
+                margin-top: 30px;
+                padding: 0 15px;
+                gap: 25px;
+            }
+
+            .vision-mission-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .vision h2,
+            .mission h2 {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+                gap: 15px;
+            }
+
+            .stat-box {
+                padding: 15px;
+            }
+
+            .stat-number {
+                font-size: 24px;
+            }
+
+            .stat-label {
+                font-size: 14px;
+            }
+
+            .carousel {
+                width: 90%;
+            }
+
+            .slide {
+                flex-direction: column;
+            }
+
+            .project-card {
+                aspect-ratio: auto;
+                min-height: 220px;
+                width: 100%;
+                padding: 30px 20px;
+            }
+
+            .project-card-rect {
+                padding: 30px 20px;
+                min-height: auto;
+            }
+
+            .project-card-rect h3 {
+                font-size: 24px;
+            }
+
+            .project-card-rect p {
+                max-width: 100%;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            .project-card button,
+            .project-card-rect button {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            /* Hide spacer cards in mobile since slides stack vertically */
+            .project-card[style*="visibility: hidden"] {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Skatersthinkph
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
+        <ul class="menu">
+            <li> <a href="index.html">Home</a></li>
+            <li><a href="projects.html"> Browse Projects</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tos.html">Terms of Service</a></li>
+            <button><a href="publish.html">Publish</a></button>
+            <button><a href="signup.html">Sign Up</a></button>
+            <button><a href="#">Sign In</a></button>
+
+
+        </ul>
+    </nav>
+
+
+
+    <div class="hero-container">
+        <div class="hero-text">
+            <div class="vision-mission-container">
+                <div class="vision">
+                    <h2>Vision</h2>
+                    <ul>
+                        <li>A nation where Filipino scientists and artists are rewarded, not punished.</li>
+                        <li>A nation where Filipino scientists and artists can thrive in their home country.</li>
+                        <li>A nation where Filipino scientists and artists do not worry about going hungry.</li>
+                    </ul>
+                </div>
+                <div class="mission">
+                    <h2>Mission</h2>
+                    <ul>
+                        <li>A platform which provides a centralized funding system for Filipino scientists and artists.
+                        </li>
+                        <li>A platform which provides security and independence to the work of Filipino scientists and
+                            artists.</li>
+                        <li>A platform which provides a space for Filipino scientists and artists to showcase their
+                            work.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-box">
+                <span class="stat-number" data-target="15000">0</span>
+                <span class="stat-label">Users</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="2400">0</span>
+                <span class="stat-label">Projects Funded</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="1000000">0</span>
+                <span class="stat-label">Pesos Raised</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="500">0</span>
+                <span class="stat-label">Daily Visitors</span>
+            </div>
+        </div>
+    </div>
+
+    <h2> Publication of the Day </h2>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="slide" id="slide-potd-1">
+                <div class="project-card-rect">
+                    <h3>Sustainable Ocean Cleanup Tech</h3>
+                    <p>A revolutionary autonomous marine drone designed to collect surface microplastics effectively.
+                        Help us expand the fleet and protect our coastal ecosystems from further pollution and waste
+                        disruption.</p>
+                    <button><a href="#">Learn More</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2> Rising Projects </h2>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1: Cards 1, 2, 3 -->
+            <div class="slide" id="slide-rising-1">
+                <div class="project-card">
+                    <h3>Eco-Friendly Skateboard Deck</h3>
+                    <p>A new approach to durable skateboard decks using 100% recycled marine plastics and bamboo.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Urban Farming Initiative</h3>
+                    <p>Bringing sustainable agriculture practices and fresh produce to the heart of the city.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Next-Gen Water Filter</h3>
+                    <p>Affordable and portable water filtration systems designed for rural communities.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+            </div>
+
+            <!-- Slide 2: Cards 4, 5, 6 -->
+            <div class="slide" id="slide-rising-2">
+                <div class="project-card">
+                    <h3>Solar Powered Backpack</h3>
+                    <p>A backpack with built-in solar panels to charge devices on the go for remote students.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Community Art Canvas</h3>
+                    <p>Connecting street artists to revitalize abandoned public spaces with colorful murals.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>AI For Education</h3>
+                    <p>Personalized learning assistants for underfunded schools seeking better education tools.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+            </div>
+
+            <!-- Slide 3: Card 7 -->
+            <div class="slide" id="slide-rising-3">
+                <div class="project-card">
+                    <h3>Open Source Robotics</h3>
+                    <p>Accessible, 3D-printable robotic prosthetic limbs for people in developing nations.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <!-- Empty spacer cards so the single card stays square and aligned properly -->
+                <div class="project-card" style="visibility: hidden;"></div>
+                <div class="project-card" style="visibility: hidden;"></div>
+            </div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="carousel-nav">
+            <a href="#slide-rising-1">1</a>
+            <a href="#slide-rising-2">2</a>
+            <a href="#slide-rising-3">3</a>
+        </div>
+    </div>
+
+    <h2> Newly Published </h2>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1: Cards 1, 2, 3 -->
+            <div class="slide" id="slide-new-1">
+                <div class="project-card">
+                    <h3>Indie Filmmakers Hub</h3>
+                    <p>An online sanctuary connecting emerging directors, writers, and actors to produce short films
+                        together.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>The Green Energy Book</h3>
+                    <p>A comprehensive illustrated guide on building DIY green energy systems from household items.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Bio-Degradable Packaging</h3>
+                    <p>Developing strong and affordable packaging solutions made from agricultural waste.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+            </div>
+
+            <!-- Slide 2: Cards 4, 5, 6 -->
+            <div class="slide" id="slide-new-2">
+                <div class="project-card">
+                    <h3>Modern Philippine Mythology</h3>
+                    <p>A dynamic webcomic series reviving local folklore stories into modern, breathtaking artwork.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Aquaponics Kit</h3>
+                    <p>A starter kit that allows beginners to grow their own fish and plants in a mutually beneficial
+                        system.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+                <div class="project-card">
+                    <h3>Historical Drama Scripts</h3>
+                    <p>Funding the printing and distribution of an awarded screenplay capturing national heroes' untold
+                        stories.</p>
+                    <button><a href="#">View Project</a></button>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="carousel-nav">
+            <a href="#slide-new-1">1</a>
+            <a href="#slide-new-2">2</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 100; // Lower is slower
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace(/,/g, '');
+
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc).toLocaleString();
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target.toLocaleString() + '+';
+                    }
+                };
+
+                updateCount();
+            });
+        });
+    </script>
+</body>
+
+</html>

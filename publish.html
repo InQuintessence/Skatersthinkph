@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Publish Project | Skatersthinkph </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar {
+            background-color: #17223a;
+            font-family: Times New Roman;
+            padding-right: 15px;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            display: inline-block
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+        }
+
+        li a {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 25px;
+        }
+
+       button {
+            background-color: #e11d48;
+            margin-left: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+
+        button a {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 15px;
+
+        }
+
+        .form-container {
+            font-family: Times New Roman;
+            background-color: darkblue;
+            border-radius: 15px;
+            padding: 40px;
+            width: 500px;
+            margin: 80px auto;
+            color: yellow;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin: 0 0 20px 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+            font-family: sans-serif;
+        }
+
+        /* File input specific styles */
+        .form-group input[type="file"] {
+            background-color: white;
+            color: black;
+            padding: 8px;
+            /* Slightly tighter padding */
+            cursor: pointer;
+        }
+
+        .suggestions {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            flex-wrap: wrap;
+            /* Ensures buttons flow to next line if they can't fit */
+        }
+
+        /* Prevent suggestion buttons from inheriting global button styles that break layout */
+        button.suggestion-btn {
+            background-color: #89b0e6;
+            color: black;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            width: auto;
+            margin-left: 0;
+        }
+
+        button.suggestion-btn:hover {
+            background-color: yellow;
+            color: darkblue;
+        }
+
+        button.form-submit {
+            background-color: yellow;
+            color: darkblue;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            padding: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-left: 0;
+            width: 100%;
+        }
+
+        button.form-submit:hover {
+            opacity: 0.9;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px 15px;
+                gap: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+
+            li a {
+                margin-right: 15px;
+                font-size: 16px;
+            }
+
+            button {
+                margin: 5px;
+                width: auto;
+                min-width: 110px;
+                padding: 12px 15px;
+            }
+
+            button a {
+                text-decoration: none;
+            }
+
+            .form-container {
+                width: 90%;
+                margin: 30px auto;
+                padding: 25px 20px;
+                box-sizing: border-box;
+            }
+
+            button.suggestion-btn {
+                margin: 2px;
+                min-width: 0;
+                padding: 8px 10px;
+                flex: 1 1 auto;
+            }
+
+            button.form-submit {
+                margin-top: 15px;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Skatersthinkph
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
+        <ul class="menu">
+            <li> <a href="index.html">Home</a></li>
+            <li><a href="projects.html"> Browse Projects</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tos.html">Terms of Service</a></li>
+            <button><a href="publish.html">Publish</a></button>
+            <button><a href="signup.html">Sign Up</a></button>
+            <button><a href="#">Sign In</a></button>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>Publish Project</h2>
+
+        <div class="form-group">
+            <label for="title">Title of Project</label>
+            <input type="text" id="title" placeholder="Enter Project Title">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Short description</label>
+            <textarea id="description" placeholder="Describe your project..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category">
+                <option value="Research and Journals">Research and Journals</option>
+                <option value="Inventions">Inventions</option>
+                <option value="Books">Books</option>
+                <option value="Screenplays">Screenplays</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="goal">Donation/Crowdfunding Goal (Pesos)</label>
+            <!-- Ranges from 100 to 100k according to instructions -->
+            <input type="number" id="goal" placeholder="e.g. 5000" min="100" max="100000">
+            <div class="suggestions">
+                <button type="button" class="suggestion-btn" onclick="setGoal(100)">₱100</button>
+                <button type="button" class="suggestion-btn" onclick="setGoal(1000)">₱1k</button>
+                <button type="button" class="suggestion-btn" onclick="setGoal(5000)">₱5k</button>
+                <button type="button" class="suggestion-btn" onclick="setGoal(10000)">₱10k</button>
+                <button type="button" class="suggestion-btn" onclick="setGoal(50000)">₱50k</button>
+                <button type="button" class="suggestion-btn" onclick="setGoal(100000)">₱100k</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="picture">Insert Picture</label>
+            <!-- allow single or multiple image files easily -->
+            <input type="file" id="picture" accept="image/*" multiple>
+        </div>
+
+        <button class="form-submit">Publish Project</button>
+    </div>
+
+    <script>
+        function setGoal(amount) {
+            document.getElementById('goal').value = amount;
+        }
+    </script>
+</body>
+
+</html>
