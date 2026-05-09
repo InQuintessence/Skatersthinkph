@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Sign Up | Skatersthinkph </title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <style>
         .navbar {
-            background-color: #17223a;
+            background-color: #EAE6B8;
             font-family: Times New Roman;
             padding-right: 15px;
             padding-left: 15px;
@@ -27,9 +28,9 @@
         }
 
         .logo {
-            font-size: 40px;
+            font-size: 35px;
             font-weight: 600;
-            color: rgb(255, 255, 255);
+            color: #36454F;
             display: inline-block
         }
 
@@ -40,14 +41,14 @@
         }
 
         li a {
-            color: rgb(255, 255, 255);
-            font-size: 20px;
+            color: #36454F;
+            font-size: 18px;
             font-weight: bold;
             margin-right: 25px;
         }
 
         button {
-            background-color: black;
+            background-color: #808000;
             margin-left: 10px;
             border-radius: 10px;
             padding: 10px;
@@ -58,17 +59,17 @@
             color: white;
             font-weight: bold;
             font-size: 15px;
-            text-decoration: none;
+
         }
 
         .form-container {
             font-family: Times New Roman;
-            background-color: darkblue;
+            background-color: #c8c49a;
             border-radius: 15px;
             padding: 40px;
             width: 350px;
             margin: 80px auto;
-            color: yellow;
+            color: #36454F;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -94,8 +95,8 @@
         }
 
         .form-submit {
-            background-color: yellow;
-            color: darkblue;
+            background-color: #808000;
+            color: white;
             font-weight: bold;
             border: none;
             border-radius: 10px;
@@ -189,6 +190,35 @@
 
     <div class="form-container">
         <h2>Create an Account</h2>
+
+        <!-- Google Sign-In Button (direct link approach) -->
+        <a href="https://accounts.google.com/o/oauth2/auth?response_type=token&client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=email%20profile"
+            id="google-signin-btn" style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: white;
+            color: #36454F;
+            border: 1px solid #c8c49a;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        " onclick="handleGoogleSignInClick(event)">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" width="20"
+                height="20">
+            Sign up with Google
+        </a>
+
+        <div style="text-align: center; color: #36454F; margin-bottom: 20px;">- OR -</div>
+
         <form id="signup-form" onsubmit="handleSignup(event)">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -208,7 +238,7 @@
             </div>
             <div class="checkbox-group">
                 <input type="checkbox" id="tos" required>
-                <label for="tos">I agree to the <a href="tos.html" style="color:white;">Terms of Service</a></label>
+                <label for="tos">I agree to the <a href="tos.html" style="color: #36454F;">Terms of Service</a></label>
             </div>
             <div class="form-group">
                 <button type="submit" class="form-submit">Sign Up</button>
@@ -219,7 +249,49 @@
     <script>
         function handleSignup(event) {
             event.preventDefault(); // Prevent form from refreshing the page
+
+            // Get values from manual form
+            const name = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+
+            // Save to localStorage
+            const userData = {
+                name: name,
+                email: email,
+                picture: null // No picture for manual signup
+            };
+            localStorage.setItem('skatersthinkph_user', JSON.stringify(userData));
+
             window.location.href = 'profile.html'; // Redirect to the profile page
+        }
+
+        function handleGoogleLogin(response) {
+            // Google sends a JWT token in response.credential
+            const responsePayload = decodeJwtResponse(response.credential);
+
+            // Extract user info
+            const userData = {
+                name: responsePayload.name,
+                email: responsePayload.email,
+                picture: responsePayload.picture
+            };
+
+            // Save to localStorage
+            localStorage.setItem('skatersthinkph_user', JSON.stringify(userData));
+
+            // Redirect to profile
+            window.location.href = 'profile.html';
+        }
+
+        // Helper function to decode JWT token
+        function decodeJwtResponse(token) {
+            var base64Url = token.split('.')[1];
+            var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+
+            return JSON.parse(jsonPayload);
         }
     </script>
 

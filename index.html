@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .navbar {
-            background-color: #17223a;
+            background-color: #EAE6B8;
             font-family: Times New Roman;
             padding-right: 15px;
             padding-left: 15px;
@@ -35,7 +35,7 @@
         .logo {
             font-size: 40px;
             font-weight: 600;
-            color: white;
+            color: #36454F;
             display: inline-block
         }
 
@@ -46,14 +46,14 @@
         }
 
         .menu li a {
-            color: white;
+            color: #36454F;
             font-size: 20px;
             font-weight: bold;
             margin-right: 25px;
         }
 
         button {
-            background-color: #e11d48;
+            background-color: #808000;
             margin-left: 10px;
             border-radius: 10px;
             padding: 10px;
@@ -61,7 +61,7 @@
         }
 
         button a {
-            color: rgb(255, 255, 255);
+            color: white;
             font-weight: bold;
             font-size: 15px;
 
@@ -89,7 +89,7 @@
             display: flex;
             flex-direction: row;
             gap: 30px;
-            color: white;
+            color: #36454F;
         }
 
         .vision,
@@ -104,7 +104,7 @@
             margin-top: 0;
             margin-bottom: 15px;
             font-family: Times New Roman;
-            color: white;
+            color: #36454F;
         }
 
         .vision ul,
@@ -123,11 +123,11 @@
         }
 
         .stat-box {
-            background-color: darkblue;
+            background-color: #c8c49a;
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            color: white;
+            color: #36454F;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -136,12 +136,13 @@
         .stat-number {
             font-size: 36px;
             font-weight: bold;
-            color: #e11d48;
+            color: #36454F;
             margin-bottom: 5px;
         }
 
         .stat-label {
             font-size: 16px;
+            color: #36454F;
         }
 
         .carousel {
@@ -173,14 +174,14 @@
         }
 
         .project-card {
-            background-color: darkblue;
+            background-color: #c8c49a;
             border-radius: 15px;
             padding: 20px;
             flex: 1 1 0;
             /* Ensures 3 cards equally divide the width */
             aspect-ratio: 1 / 1;
             /* Makes them box/square-shaped */
-            color: white;
+            color: #36454F;
             text-align: center;
             font-family: Times New Roman;
             display: flex;
@@ -191,33 +192,64 @@
         }
 
         .project-card h3 {
-            color: #e11d48;
+            color: #36454F;
             font-size: 22px;
             margin-bottom: 10px;
         }
 
         .project-card p {
             font-size: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 8px;
+        }
+
+        .card-meta {
+            font-size: 13px;
+            color: #36454F;
+            opacity: 0.75;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .fund-type {
+            font-size: 13px;
+            font-weight: bold;
+            color: #36454F;
+            margin-bottom: 14px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .project-card button {
-            background-color: #e11d48;
+            background-color: #808000;
             margin: 0;
-            width: 130px;
+            width: 110px;
+            border-radius: 8px;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .project-card button.donate-btn {
+            background-color: #808000
         }
 
         .project-card button a {
-            color: darkblue;
+            color: white;
             text-decoration: none;
+            font-size: 14px;
         }
 
         .project-card-rect {
-            background-color: darkblue;
+            background-color: #c8c49a;
             border-radius: 15px;
             padding: 40px;
             flex: 0 0 100%;
-            color: white;
+            color: #36454F;
             text-align: center;
             font-family: Times New Roman;
             display: flex;
@@ -229,7 +261,7 @@
         }
 
         .project-card-rect h3 {
-            color: #e11d48;
+            color: #36454F;
             margin-top: 0;
             font-size: 30px;
             margin-bottom: 15px;
@@ -242,14 +274,14 @@
         }
 
         .project-card-rect button {
-            background-color: #e11d48;
+            background-color: #808000;
             margin: 0;
             width: 150px;
             padding: 12px;
         }
 
         .project-card-rect button a {
-            color: darkblue;
+            color: white;
             text-decoration: none;
             font-weight: bold;
             font-size: 18px;
@@ -266,8 +298,8 @@
             display: inline-block;
             width: 35px;
             height: 35px;
-            background-color: rgb(53, 82, 82);
-            color: white;
+            background-color: #a8a47a;
+            color: #36454F;
             text-align: center;
             line-height: 35px;
             border-radius: 50%;
@@ -277,13 +309,20 @@
         }
 
         .carousel-nav a:hover {
-            background-color: darkblue;
+            background-color: #a8a47a;
+            color: #36454F;
         }
 
         h2 {
             font-family: Times New Roman;
             text-align: center;
-            color: white;
+            color: #36454F;
+        }
+
+        h3 {
+            font-family: Times New Roman;
+            text-align: center;
+            color: #36454F;
         }
 
         /* Mobile Responsive Styles */
@@ -486,59 +525,93 @@
 
     <h2> Rising Projects </h2>
 
+    <!-- Rising Projects Carousel -->
     <div class="carousel">
         <div class="carousel-inner">
-            <!-- Slide 1: Cards 1, 2, 3 -->
+            <!-- Slide 1 -->
             <div class="slide" id="slide-rising-1">
                 <div class="project-card">
                     <h3>Eco-Friendly Skateboard Deck</h3>
                     <p>A new approach to durable skateboard decks using 100% recycled marine plastics and bamboo.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Urban Farming Initiative</h3>
                     <p>Bringing sustainable agriculture practices and fresh produce to the heart of the city.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Next-Gen Water Filter</h3>
                     <p>Affordable and portable water filtration systems designed for rural communities.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 2: Cards 4, 5, 6 -->
+            <!-- Slide 2 -->
             <div class="slide" id="slide-rising-2">
                 <div class="project-card">
                     <h3>Solar Powered Backpack</h3>
                     <p>A backpack with built-in solar panels to charge devices on the go for remote students.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Community Art Canvas</h3>
                     <p>Connecting street artists to revitalize abandoned public spaces with colorful murals.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>AI For Education</h3>
                     <p>Personalized learning assistants for underfunded schools seeking better education tools.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 3: Card 7 -->
+            <!-- Slide 3 -->
             <div class="slide" id="slide-rising-3">
                 <div class="project-card">
                     <h3>Open Source Robotics</h3>
                     <p>Accessible, 3D-printable robotic prosthetic limbs for people in developing nations.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
-                <!-- Empty spacer cards so the single card stays square and aligned properly -->
                 <div class="project-card" style="visibility: hidden;"></div>
                 <div class="project-card" style="visibility: hidden;"></div>
             </div>
         </div>
-        <!-- Navigation Links -->
         <div class="carousel-nav">
             <a href="#slide-rising-1">1</a>
             <a href="#slide-rising-2">2</a>
@@ -546,52 +619,80 @@
         </div>
     </div>
 
-    <h2> Newly Published </h2>
-
+    <!-- Newly Published Carousel -->
     <div class="carousel">
         <div class="carousel-inner">
-            <!-- Slide 1: Cards 1, 2, 3 -->
+            <!-- Slide 1 -->
             <div class="slide" id="slide-new-1">
                 <div class="project-card">
                     <h3>Indie Filmmakers Hub</h3>
                     <p>An online sanctuary connecting emerging directors, writers, and actors to produce short films
                         together.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>The Green Energy Book</h3>
                     <p>A comprehensive illustrated guide on building DIY green energy systems from household items.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Bio-Degradable Packaging</h3>
                     <p>Developing strong and affordable packaging solutions made from agricultural waste.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Slide 2: Cards 4, 5, 6 -->
+            <!-- Slide 2 -->
             <div class="slide" id="slide-new-2">
                 <div class="project-card">
                     <h3>Modern Philippine Mythology</h3>
                     <p>A dynamic webcomic series reviving local folklore stories into modern, breathtaking artwork.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Aquaponics Kit</h3>
                     <p>A starter kit that allows beginners to grow their own fish and plants in a mutually beneficial
                         system.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Historical Drama Scripts</h3>
                     <p>Funding the printing and distribution of an awarded screenplay capturing national heroes' untold
                         stories.</p>
-                    <button><a href="#">View Project</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Navigation Links -->
         <div class="carousel-nav">
             <a href="#slide-new-1">1</a>
             <a href="#slide-new-2">2</a>

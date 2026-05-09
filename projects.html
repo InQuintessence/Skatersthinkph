@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <style type="text/css">
         .navbar {
-            background-color: #17223a;
+            background-color: #EAE6B8;
             font-family: Times New Roman;
             padding-right: 15px;
             padding-left: 15px;
@@ -25,7 +25,7 @@
         }
 
         .categories {
-            background-color: darkblue;
+            background-color: #c8c49a;
             padding: 15px 40px;
             border-radius: 15px;
             display: flex;
@@ -36,7 +36,7 @@
         }
 
         .categories li a {
-            color: #e11d48;
+            color: #36454F;
             margin-right: 0;
         }
 
@@ -58,7 +58,7 @@
         .logo {
             font-size: 40px;
             font-weight: 600;
-            color: rgb(255, 255, 255);
+            color: #36454F;
             display: inline-block
         }
 
@@ -69,14 +69,14 @@
         }
 
         li a {
-            color: rgb(255, 255, 255);
+            color: #36454F;
             font-size: 20px;
             font-weight: bold;
             margin-right: 25px;
         }
 
         button {
-            background-color: #e11d48;
+            background-color: #808000;
             margin-left: 10px;
             border-radius: 10px;
             padding: 10px;
@@ -84,7 +84,7 @@
         }
 
         button a {
-            color: rgb(255, 255, 255);
+            color: white;
             font-weight: bold;
             font-size: 15px;
 
@@ -95,7 +95,7 @@
             font-family: Times New Roman;
             margin-top: 60px;
             font-size: 32px;
-            color: white;
+            color: #36454F;
         }
 
         .hero-container {
@@ -122,7 +122,7 @@
             margin-top: 0;
             margin-bottom: 20px;
             font-family: Times New Roman;
-            color: white;
+            color: #36454F;
         }
 
         .hero-text p {
@@ -130,7 +130,7 @@
             text-align: left;
             margin: 0;
             line-height: 1.6;
-            color: white;
+            color: #36454F;
         }
 
         .hero-stats {
@@ -141,11 +141,11 @@
         }
 
         .stat-box {
-            background-color: darkblue;
+            background-color: #c8c49a;
             border-radius: 15px;
             padding: 30px;
             text-align: center;
-            color: white;
+            color: #36454F;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -154,12 +154,13 @@
         .stat-number {
             font-size: 36px;
             font-weight: bold;
-            color: #e11d48;
+            color: #36454F;
             margin-bottom: 5px;
         }
 
         .stat-label {
             font-size: 16px;
+            color: #36454F;
         }
 
         .carousel {
@@ -191,12 +192,12 @@
         }
 
         .project-card {
-            background-color: darkblue;
+            background-color: #c8c49a;
             border-radius: 15px;
             padding: 20px;
             flex: 1 1 0;
             aspect-ratio: 1 / 1.1;
-            color: white;
+            color: #36454F;
             text-align: center;
             font-family: Times New Roman;
             display: flex;
@@ -207,7 +208,7 @@
         }
 
         .project-card h3 {
-            color: #e11d48;
+            color: #36454F;
             margin-top: 0;
             font-size: 20px;
             margin-bottom: 10px;
@@ -221,7 +222,7 @@
         .progress-bar-container {
             width: 90%;
             height: 10px;
-            background-color: rgb(53, 82, 82);
+            background-color: #a8a47a;
             border-radius: 5px;
             margin-bottom: 5px;
             overflow: hidden;
@@ -229,18 +230,18 @@
 
         .progress-bar-fill {
             height: 100%;
-            background-color: #e11d48;
+            background-color: #808000;
         }
 
         .progress-text {
             font-size: 14px;
-            color: #e11d48;
+            color: #36454F;
             margin-bottom: 15px;
             font-weight: bold;
         }
 
         .project-card button {
-            background-color: #e11d48;
+            background-color: #808000;
             margin: 0;
             width: 130px;
             margin-top: auto;
@@ -250,9 +251,36 @@
         }
 
         .project-card button a {
-            color: darkblue;
+            color: white;
             text-decoration: none;
             font-weight: bold;
+        }
+
+
+        .card-meta {
+            font-size: 13px;
+            color: #36454F;
+            opacity: 0.75;
+            margin-bottom: 4px;
+            font-style: italic;
+        }
+
+        .fund-type {
+            font-size: 13px;
+            font-weight: bold;
+            color: #36454F;
+            margin-bottom: 10px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-card button.donate-btn {
+            background-color: #808000
         }
 
         .carousel-nav {
@@ -266,8 +294,8 @@
             display: inline-block;
             width: 35px;
             height: 35px;
-            background-color: rgb(53, 82, 82);
-            color: white;
+            background-color: #c8c49a;
+            color: #36454F;
             text-align: center;
             line-height: 35px;
             border-radius: 50%;
@@ -277,7 +305,7 @@
         }
 
         .carousel-nav a:hover {
-            background-color: darkblue;
+            background-color: #a8a47a;
         }
 
         /* Mobile Responsive Styles */
@@ -482,7 +510,12 @@
                         <div class="progress-bar-fill" style="width: 75%;"></div>
                     </div>
                     <div class="progress-text">75% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Ocean Acidification Study</h3>
@@ -491,7 +524,12 @@
                         <div class="progress-bar-fill" style="width: 42%;"></div>
                     </div>
                     <div class="progress-text">42% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Microplastics in Rainwater</h3>
@@ -500,7 +538,12 @@
                         <div class="progress-bar-fill" style="width: 88%;"></div>
                     </div>
                     <div class="progress-text">88% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
             <div class="slide" id="research-slide-2">
@@ -511,7 +554,12 @@
                         <div class="progress-bar-fill" style="width: 25%;"></div>
                     </div>
                     <div class="progress-text">25% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Graphene Solar Panels</h3>
@@ -520,7 +568,12 @@
                         <div class="progress-bar-fill" style="width: 90%;"></div>
                     </div>
                     <div class="progress-text">90% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>AI in Medical Diagnoses</h3>
@@ -529,7 +582,12 @@
                         <div class="progress-bar-fill" style="width: 60%;"></div>
                     </div>
                     <div class="progress-text">60% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -551,7 +609,12 @@
                         <div class="progress-bar-fill" style="width: 30%;"></div>
                     </div>
                     <div class="progress-text">30% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Portable Wind Turbine</h3>
@@ -560,7 +623,12 @@
                         <div class="progress-bar-fill" style="width: 80%;"></div>
                     </div>
                     <div class="progress-text">80% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Biodegradable Plastic</h3>
@@ -569,7 +637,12 @@
                         <div class="progress-bar-fill" style="width: 55%;"></div>
                     </div>
                     <div class="progress-text">55% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
             <div class="slide" id="inventions-slide-2">
@@ -580,7 +653,12 @@
                         <div class="progress-bar-fill" style="width: 15%;"></div>
                     </div>
                     <div class="progress-text">15% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Automated Vertical Farm</h3>
@@ -589,7 +667,12 @@
                         <div class="progress-bar-fill" style="width: 95%;"></div>
                     </div>
                     <div class="progress-text">95% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Low-Cost Prosthetics</h3>
@@ -598,7 +681,12 @@
                         <div class="progress-bar-fill" style="width: 70%;"></div>
                     </div>
                     <div class="progress-text">70% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -620,7 +708,12 @@
                         <div class="progress-bar-fill" style="width: 45%;"></div>
                     </div>
                     <div class="progress-text">45% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Chronicles of the Deep</h3>
@@ -629,7 +722,12 @@
                         <div class="progress-bar-fill" style="width: 85%;"></div>
                     </div>
                     <div class="progress-text">85% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Urban Gardening Guide</h3>
@@ -638,7 +736,12 @@
                         <div class="progress-bar-fill" style="width: 65%;"></div>
                     </div>
                     <div class="progress-text">65% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
             <div class="slide" id="books-slide-2">
@@ -649,7 +752,12 @@
                         <div class="progress-bar-fill" style="width: 100%;"></div>
                     </div>
                     <div class="progress-text">100% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Understanding AI Ethics</h3>
@@ -658,7 +766,12 @@
                         <div class="progress-bar-fill" style="width: 20%;"></div>
                     </div>
                     <div class="progress-text">20% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Poetry of the Cosmos</h3>
@@ -667,7 +780,12 @@
                         <div class="progress-bar-fill" style="width: 50%;"></div>
                     </div>
                     <div class="progress-text">50% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -689,7 +807,12 @@
                         <div class="progress-bar-fill" style="width: 12%;"></div>
                     </div>
                     <div class="progress-text">12% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>The Last Detective</h3>
@@ -698,7 +821,12 @@
                         <div class="progress-bar-fill" style="width: 77%;"></div>
                     </div>
                     <div class="progress-text">77% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>A Summer in Manila</h3>
@@ -707,7 +835,12 @@
                         <div class="progress-bar-fill" style="width: 92%;"></div>
                     </div>
                     <div class="progress-text">92% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
             <div class="slide" id="screenplays-slide-2">
@@ -718,7 +851,12 @@
                         <div class="progress-bar-fill" style="width: 38%;"></div>
                     </div>
                     <div class="progress-text">38% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Silent Symphony</h3>
@@ -727,7 +865,12 @@
                         <div class="progress-bar-fill" style="width: 58%;"></div>
                     </div>
                     <div class="progress-text">58% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Product</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
                 <div class="project-card">
                     <h3>Journey to the Center</h3>
@@ -736,7 +879,12 @@
                         <div class="progress-bar-fill" style="width: 82%;"></div>
                     </div>
                     <div class="progress-text">82% Funded</div>
-                    <button><a href="#">View</a></button>
+                    <p class="card-meta">[Author]</p>
+                    <p class="fund-type">Funds to Support Founder</p>
+                    <div class="card-actions">
+                        <button><a href="#">View</a></button>
+                        <button class="donate-btn"><a href="#">Donate</a></button>
+                    </div>
                 </div>
             </div>
         </div>

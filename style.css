@@ -2,12 +2,10 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: #111827;
+    background-color: #FFFDD0;
+    color: #36454F;
 }
 
-li {
-    display: list-item;
-}
 
 
 @media screen and (max-width: 600px) {
