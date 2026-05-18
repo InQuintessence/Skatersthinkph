@@ -21,7 +21,9 @@
         .menu {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -44,7 +46,7 @@
             color: #36454F;
             font-size: 18px;
             font-weight: bold;
-            margin-right: 25px;
+            margin-right: 5px;
         }
 
         button {
@@ -52,7 +54,7 @@
             margin-left: 10px;
             border-radius: 10px;
             padding: 10px;
-            width: 90px;
+            width: auto; min-width: 80px;
         }
 
         button a {
@@ -118,6 +120,13 @@
         .checkbox-group input {
             width: auto;
             margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-family: sans-serif;
         }
 
         /* Mobile Responsive Styles */
@@ -295,6 +304,9 @@
         }
     </script>
 
+    <footer>
+        <p>&copy; 2026 Skatersthinkph. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

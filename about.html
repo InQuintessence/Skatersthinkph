@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Skatersthinkph </title>
+    <title> About | Skatersthinkph </title>
     <link rel="stylesheet" href="style.css">
     <style>
         .navbar {
@@ -26,7 +26,9 @@
         .menu {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -47,9 +49,10 @@
 
         li a {
             color: #36454F;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
-            margin-right: 25px;
+            margin-right: 5px;
+            text-decoration: none;
         }
 
         button {
@@ -57,7 +60,7 @@
             margin-left: 10px;
             border-radius: 10px;
             padding: 10px;
-            width: 90px;
+            width: auto; min-width: 80px;
         }
 
         button a {
@@ -85,6 +88,13 @@
             gap: 40px;
             margin-top: 80px;
         }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-family: sans-serif;
+        }
     </style>
 </head>
 
@@ -98,7 +108,7 @@
         <ul class="menu">
             <li> <a href="index.html">Home</a></li>
             <li><a href="projects.html"> Browse Projects</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="tos.html">Terms of Service</a></li>
             <button><a href="publish.html">Publish</a></button>
@@ -147,3 +157,11 @@
         their own work and also have a hassle-free system to publicize their works, all while nurturing their sense of
         national pride.
     </p>
+
+    <footer>
+        <p>&copy; 2026 Skatersthinkph. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

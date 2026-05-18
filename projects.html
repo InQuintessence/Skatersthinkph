@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Skatersthinkph </title>
+    <title> Projects | Skatersthinkph </title>
     <link rel="stylesheet" href="style.css">
     <style type="text/css">
         .navbar {
@@ -49,7 +49,9 @@
         .menu {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -70,9 +72,10 @@
 
         li a {
             color: #36454F;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
-            margin-right: 25px;
+            margin-right: 5px;
+            text-decoration: none;
         }
 
         button {
@@ -80,7 +83,7 @@
             margin-left: 10px;
             border-radius: 10px;
             padding: 10px;
-            width: 90px;
+            width: auto; min-width: 80px;
         }
 
         button a {
@@ -308,6 +311,13 @@
             background-color: #a8a47a;
         }
 
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .navbar {
@@ -416,29 +426,149 @@
 
             .project-card {
                 aspect-ratio: auto;
-                min-height: 250px;
+                min-height: auto;
                 width: 100%;
-                padding: 25px 20px;
+                padding: 20px 15px;
             }
 
             .project-card h3 {
-                font-size: 22px;
+                font-size: 18px;
+                margin-bottom: 5px;
             }
 
             .project-card p {
-                font-size: 16px;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .card-meta {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+
+            .fund-type {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .progress-text {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            .card-actions {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
             }
 
             .project-card button {
-                width: 100%;
-                max-width: 200px;
+                width: 48%;
+                min-width: 0;
+                max-width: none;
                 align-self: center;
-                margin-top: auto;
+                margin: 0;
+                padding: 8px 5px;
+            }
+
+            .project-card button a {
+                font-size: 13px;
             }
 
             .project-card[style*="visibility: hidden"] {
                 display: none !important;
             }
+        }
+
+        .nav-tab {
+            width: 95%;
+            max-width: 1400px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .dropdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .dropdown {
+            position: relative;
+            flex: 1;
+        }
+
+        .dropdown-btn {
+            width: 100%;
+            background-color: #EAE6B8;
+            color: #36454F;
+            padding: 18px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid #c8c49a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: Times New Roman;
+        }
+
+        .dropdown:first-child .dropdown-btn {
+            border-radius: 40px 0 0 40px;
+            border-right: none;
+        }
+
+        .dropdown:last-child .dropdown-btn {
+            border-radius: 0 40px 40px 0;
+        }
+
+        .dropdown:hover .dropdown-btn {
+            background-color: #808000;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 320px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            border-radius: 15px;
+            overflow: hidden;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 10px;
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .dropdown-content a {
+            color: #36454F;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            border-bottom: 1px solid #f1f1f1;
+            font-family: sans-serif;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #EAE6B8;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
     </style>
 </head>
@@ -453,7 +583,7 @@
         <ul class="menu">
             <li> <a href="index.html">Home</a></li>
             <li><a href="projects.html"> Browse Projects</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="tos.html">Terms of Service</a></li>
             <button><a href="publish.html">Publish</a></button>
@@ -463,12 +593,53 @@
     </nav>
 
     <nav class="nav-tab">
-        <ul class="categories">
-            <li> <a href="#">Research and Journals</a></li>
-            <li> <a href="#">Inventions</a></li>
-            <li> <a href="#">Books</a></li>
-            <li> <a href="#">Screenplays</a></li>
-        </ul>
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <button class="dropdown-btn">Science and Technology</button>
+                <div class="dropdown-content">
+                    <a href="#">Architecture</a>
+                    <a href="#">Astronomy</a>
+                    <a href="#">Environment and Sustainability</a>
+                    <a href="#">Engineering</a>
+                    <a href="#">Finance</a>
+                    <a href="#">Geography</a>
+                    <a href="#">Inventions</a>
+                    <a href="#">Landscape</a>
+                    <a href="#">Mathematics</a>
+                    <a href="#">Medical Science</a>
+                    <a href="#">Natural Science</a>
+                    <a href="#">Research and Journals</a>
+                    <a href="#">Research, Methods</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Humanities</button>
+                <div class="dropdown-content">
+                    <a href="#">Anthropology</a>
+                    <a href="#">Books</a>
+                    <a href="#">Business, Management and Marketing</a>
+                    <a href="#">Criminology and Criminal Justice</a>
+                    <a href="#">Economics, Finance and Accounting</a>
+                    <a href="#">Global Development</a>
+                    <a href="#">Graphic Novels</a>
+                    <a href="#">History</a>
+                    <a href="#">Human Rights</a>
+                    <a href="#">Indigenous Studies</a>
+                    <a href="#">Interior Design</a>
+                    <a href="#">Law</a>
+                    <a href="#">Philosophy</a>
+                    <a href="#">Politics & International Relations</a>
+                    <a href="#">Screenplays</a>
+                    <a href="#">Social Work and Social Policy</a>
+                    <a href="#">Sociology & Social Policy</a>
+                    <a href="#">Sports and Leisure</a>
+                    <a href="#">Theology</a>
+                    <a href="#">Tourism, Hospitality and Events</a>
+                    <a href="#">Urban Studies</a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <div class="hero-container">
@@ -917,6 +1088,9 @@
             });
         });
     </script>
+    <footer>
+        <p>&copy; 2026 Skatersthinkph. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

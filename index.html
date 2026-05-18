@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Skatersthinkph </title>
+    <title> Home | Skatersthinkph </title>
     <link rel="stylesheet" href="style.css">
     <style>
         .navbar {
@@ -26,7 +26,9 @@
         .menu {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
+            flex-wrap: nowrap;
+            white-space: nowrap;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -47,9 +49,10 @@
 
         .menu li a {
             color: #36454F;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
-            margin-right: 25px;
+            margin-right: 5px;
+            text-decoration: none;
         }
 
         button {
@@ -57,7 +60,8 @@
             margin-left: 10px;
             border-radius: 10px;
             padding: 10px;
-            width: 90px;
+            width: auto;
+            min-width: 80px;
         }
 
         button a {
@@ -325,6 +329,13 @@
             color: #36454F;
         }
 
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .navbar {
@@ -346,6 +357,7 @@
             li a {
                 margin-right: 15px;
                 font-size: 16px;
+                text-decoration: none;
             }
 
             button {
@@ -405,31 +417,66 @@
 
             .project-card {
                 aspect-ratio: auto;
-                min-height: 220px;
+                min-height: auto;
                 width: 100%;
-                padding: 30px 20px;
+                padding: 20px 15px;
+            }
+
+            .project-card h3 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .project-card p {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .card-meta {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+
+            .fund-type {
+                font-size: 12px;
+                margin-bottom: 10px;
             }
 
             .project-card-rect {
-                padding: 30px 20px;
+                padding: 20px 15px;
                 min-height: auto;
             }
 
             .project-card-rect h3 {
-                font-size: 24px;
+                font-size: 20px;
             }
 
             .project-card-rect p {
                 max-width: 100%;
-                font-size: 16px;
-                margin-bottom: 20px;
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .card-actions {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
             }
 
             .project-card button,
             .project-card-rect button {
-                width: 100%;
-                max-width: 200px;
-                margin: 0 auto;
+                width: 48%;
+                min-width: 0;
+                max-width: none;
+                margin: 0;
+                padding: 8px 5px;
+            }
+
+            .project-card button a,
+            .project-card-rect button a {
+                font-size: 13px;
             }
 
             /* Hide spacer cards in mobile since slides stack vertically */
@@ -450,7 +497,7 @@
         <ul class="menu">
             <li> <a href="index.html">Home</a></li>
             <li><a href="projects.html"> Browse Projects</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="tos.html">Terms of Service</a></li>
             <button><a href="publish.html">Publish</a></button>
@@ -723,6 +770,11 @@
             });
         });
     </script>
+
+    <footer>
+        <p>&copy; 2026 Skatersthinkph. All rights reserved.</p>
+    </footer>
+
 </body>
 
 </html>
