@@ -1,0 +1,98 @@
+[
+  {
+    "id": "quantum-computing-advances",
+    "title": "Quantum Computing Advances",
+    "category": "Research and Journals",
+    "description": "Exploring the next generation of quantum algorithms for scalable computation.",
+    "fundingPercent": 75,
+    "author": "Dr. A. Reyes",
+    "fundType": "Funds to Support Product",
+    "imageUrl": "https://placehold.co/600x400?text=Quantum+Computing",
+    "projectUrl": "https://example.com/project/quantum-computing-advances",
+    "donateUrl": "https://example.com/donate/quantum-computing-advances"
+  },
+  {
+    "id": "ocean-acidification-study",
+    "title": "Ocean Acidification Study",
+    "category": "Research and Journals",
+    "description": "Collecting real-world data on ocean chemistry to inform climate policy.",
+    "fundingPercent": 42,
+    "author": "M. Santos",
+    "fundType": "Funds to Support Founder",
+    "imageUrl": "https://placehold.co/600x400?text=Ocean+Acidification",
+    "projectUrl": "https://example.com/project/ocean-acidification-study",
+    "donateUrl": "https://example.com/donate/ocean-acidification-study"
+  },
+  {
+    "id": "smart-water-purifier",
+    "title": "Smart Water Purifier",
+    "category": "Inventions",
+    "description": "A compact purifier that adapts to water quality in real-time.",
+    "fundingPercent": 30,
+    "author": "L. Reyes",
+    "fundType": "Funds to Support Product",
+    "imageUrl": "https://placehold.co/600x400?text=Water+Purifier",
+    "projectUrl": "https://example.com/project/smart-water-purifier",
+    "donateUrl": "https://example.com/donate/smart-water-purifier"
+  },
+  {
+    "id": "portable-wind-turbine",
+    "title": "Portable Wind Turbine",
+    "category": "Inventions",
+    "description": "A lightweight turbine for powering remote devices and shelters.",
+    "fundingPercent": 80,
+    "author": "C. Navarro",
+    "fundType": "Funds to Support Founder",
+    "imageUrl": "https://placehold.co/600x400?text=Wind+Turbine",
+    "projectUrl": "https://example.com/project/portable-wind-turbine",
+    "donateUrl": "https://example.com/donate/portable-wind-turbine"
+  },
+  {
+    "id": "the-martian-frontier",
+    "title": "The Martian Frontier",
+    "category": "Books",
+    "description": "A science thriller that follows explorers on Mars into the unknown.",
+    "fundingPercent": 45,
+    "author": "J. Cruz",
+    "fundType": "Funds to Support Product",
+    "imageUrl": "https://placehold.co/600x400?text=Martian+Frontier",
+    "projectUrl": "https://example.com/project/the-martian-frontier",
+    "donateUrl": "https://example.com/donate/the-martian-frontier"
+  },
+  {
+    "id": "history-of-skateboarding",
+    "title": "History of Skateboarding",
+    "category": "Books",
+    "description": "A visual history book chronicling skateboarding culture and innovation.",
+    "fundingPercent": 100,
+    "author": "R. Dela Cruz",
+    "fundType": "Funds to Support Founder",
+    "imageUrl": "https://placehold.co/600x400?text=Skateboarding+History",
+    "projectUrl": "https://example.com/project/history-of-skateboarding",
+    "donateUrl": "https://example.com/donate/history-of-skateboarding"
+  },
+  {
+    "id": "echoes-of-tomorrow",
+    "title": "Echoes of Tomorrow",
+    "category": "Screenplays",
+    "description": "A sci-fi screenplay about time, memory, and city futures.",
+    "fundingPercent": 12,
+    "author": "A. Villanueva",
+    "fundType": "Funds to Support Product",
+    "imageUrl": "https://placehold.co/600x400?text=Screenplay+Echoes+of+Tomorrow",
+    "projectUrl": "https://example.com/project/echoes-of-tomorrow",
+    "donateUrl": "https://example.com/donate/echoes-of-tomorrow"
+  },
+  {
+    "id": "neon-city-lights",
+    "title": "Neon City Lights",
+    "category": "Screenplays",
+    "description": "A contemporary drama set in a fast-changing urban world.",
+    "fundingPercent": 38,
+    "author": "M. Tan",
+    "fundType": "Funds to Support Founder",
+    "imageUrl": "https://placehold.co/600x400?text=Neon+City+Lights",
+    "projectUrl": "https://example.com/project/neon-city-lights",
+    "donateUrl": "https://example.com/donate/neon-city-lights"
+  }
+]
