@@ -1,0 +1,63 @@
+[
+{
+  "id": "teleoperated-race-car",
+  "title": "Teleoperated Race Car",
+  "category": "Rising Projects",
+  "description": "The teleoperated race car merges e-sports and motor sports through teleoperation technology.",
+  "fundingPercent": 0,
+  "author": "Karmelo Antonio",
+  "fundType": "Funds to Support Product",
+  "imageUrl": "https://placehold.co/600x400?text=Teleoperated+Race+Car",
+  "projectUrl": "teleoperated-race-car.html",
+  "donateUrl": "teleoperated-race-car.html"
+},
+{
+  "id": "the-paradox-of-want",
+  "title": "The Paradox of Want",
+  "category": "Rising Projects",
+  "description": "A moth that wants the sun, and meets many a curious folk along the way.",
+  "fundingPercent": 0,
+  "author": "Marcus Yuan G. Pelayo",
+  "fundType": "Funds to Support Founder",
+  "imageUrl": "https://placehold.co/600x400?text=The+Paradox+of+Want",
+  "projectUrl": "the-paradox-of-want.html",
+  "donateUrl": "the-paradox-of-want.html"
+},
+{
+  "id": "next-gen-water-filter",
+  "title": "Next-Gen Water Filter",
+  "category": "Rising Projects",
+  "description": "Affordable and portable water filtration systems designed for rural communities.",
+  "fundingPercent": 0,
+  "author": "[Author]",
+  "fundType": "Funds to Support Product",
+  "imageUrl": "https://placehold.co/600x400?text=Next-Gen+Water+Filter",
+  "projectUrl": "",
+  "donateUrl": ""
+},
+{
+  "id": "community-art-canvas",
+  "title": "Community Art Canvas",
+  "category": "Rising Projects",
+  "description": "Connecting street artists to revitalize abandoned public spaces with colorful murals.",
+  "fundingPercent": 0,
+  "author": "[Author]",
+  "fundType": "Funds to Support Product",
+  "imageUrl": "https://placehold.co/600x400?text=Community+Art+Canvas",
+  "projectUrl": "",
+  "donateUrl": ""
+},
+{
+  "id": "open-source-robotics",
+  "title": "Open Source Robotics",
+  "category": "Rising Projects",
+  "description": "Accessible, 3D-printable robotic prosthetic limbs for people in developing nations.",
+  "fundingPercent": 0,
+  "author": "[Author]",
+  "fundType": "Funds to Support Product",
+  "imageUrl": "https://placehold.co/600x400?text=Open+Source+Robotics",
+  "projectUrl": "",
+  "donateUrl": ""
+}
+]
+
