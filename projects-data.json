@@ -8,8 +8,8 @@
     "fundingPercent": 75,
     "author": "placeholder",
     "fundType": "Funds to Support Product",
-    "imageUrl": "https://placehold.co/600x400?text=Quantum+Computing",
     "projectUrl": "https://example.com/project/quantum-computing-advances",
+    "imageUrl": "https://placehold.co/600x400?text=Quantum+Computing",
     "donateUrl": "https://example.com/donate/quantum-computing-advances"
   },
   {
@@ -65,6 +65,19 @@
     "donateUrl": "https://example.com/donate/portable-wind-turbine"
   },
   {
+    "id": "power-wall",
+    "title": "Power Wall",
+    "category": "Inventions",
+    "description": "A portable power station for powering homes or buildings in times of power outages..",
+    "pageHtml": "<section><h2>Power Wall</h2><p>This project features a portable power station for charging devices and powering homess.</p><h3>Project overview</h3><p>The work focuses on innovative battery technology and efficient power management.</p><h3>Why it matters</h3><p>Providing reliable power solutions in remote and underserved areas can have significant social and economic impacts.</p></section>",
+    "fundingPercent": 80,
+    "author": "placeholder",
+    "fundType": "Funds to Support Founder",
+    "imageUrl": "https://placehold.co/600x400?text=Power+Wall",
+    "projectUrl": "https://example.com/project/power-wall",
+    "donateUrl": "https://example.com/donate/power-wall"
+  },
+  {
     "id": "the-martian-frontier",
     "title": "The Martian Frontier",
     "category": "Books",
@@ -76,6 +89,19 @@
     "imageUrl": "https://placehold.co/600x400?text=Martian+Frontier",
     "projectUrl": "https://example.com/project/the-martian-frontier",
     "donateUrl": "https://example.com/donate/the-martian-frontier"
+  },
+  {
+    "id": "astro-lexicon",
+    "title": "Astro Lexicon",
+    "category": "Books",
+    "description": "A comprehensive guide to space exploration and astronomy.",
+    "pageHtml": "<section><h2>Astro Lexicon</h2><p>This project is a comprehensive guide to space exploration and astronomy.</p><h3>Project overview</h3><p>The work focuses on the latest discoveries and advancements in the field of astronomy.</p><h3>Why it matters</h3><p>Expanding our knowledge of space can inspire future generations and drive technological innovation.</p></section>",
+    "fundingPercent": 60,
+    "author": "placeholder",
+    "fundType": "Funds to Support Product",
+    "imageUrl": "https://placehold.co/600x400?text=Astro+Lexicon",
+    "projectUrl": "https://example.com/project/astro-lexicon",
+    "donateUrl": "https://example.com/donate/astro-lexicon"
   },
   {
     "id": "history-of-skateboarding",
@@ -115,5 +141,19 @@
     "imageUrl": "https://placehold.co/600x400?text=Neon+City+Lights",
     "projectUrl": "https://example.com/project/neon-city-lights",
     "donateUrl": "https://example.com/donate/neon-city-lights"
+  },
+  {
+
+    "id": "flooding-in-manila",
+    "title": "Floods in Manila",
+    "category": "Screenplays",
+    "description": "A short film exploring the impact of flooding on communities in Manila.",
+    "pageHtml": "<section><h2>Floods in Manila</h2><p>This project is a short film exploring the impact of flooding on communities in Manila.</p><h3>Project overview</h3><p>The work focuses on the experiences and resilience of people affected by floods.</p><h3>Why it matters</h3><p>Understanding the challenges faced by flood-affected communities can inform policy and support efforts.</p></section>",
+    "fundingPercent": 38,
+    "author": "placeholder",
+    "fundType": "Funds to Support Founder",
+    "imageUrl": "https://placehold.co/600x400?text=Floods+in+Manila",
+    "projectUrl": "https://example.com/project/flooding-in-manila",
+    "donateUrl": "https://example.com/donate/flooding-in-manila"
   }
 ]
