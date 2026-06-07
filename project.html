@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail | Skatersthinkph</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', serif;
+            background-color: #FFFDD0;
+            color: #36454F;
+        }
+
+        .navbar {
+            background-color: #EAE6B8;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #36454F;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        .menu li a,
+        .menu button a {
+            color: #36454F;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .project-detail {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px 40px;
+        }
+
+        .project-detail-head,
+        .project-detail-body {
+            background-color: #c8c49a;
+            border-radius: 22px;
+            padding: 24px;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 24px;
+        }
+
+        .project-detail-head h1 {
+            margin: 0 0 12px;
+            font-size: 40px;
+            color: #36454F;
+        }
+
+        .project-detail-head p {
+            margin: 0;
+            line-height: 1.75;
+            font-size: 18px;
+            color: #36454F;
+        }
+
+        .project-detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .project-detail-meta span {
+            display: inline-block;
+            padding: 12px 18px;
+            background-color: #EAE6B8;
+            border-radius: 14px;
+            font-size: 15px;
+        }
+
+        .project-detail-body h2,
+        .project-detail-body h3 {
+            margin-top: 0;
+            color: #36454F;
+        }
+
+        .project-detail-body p,
+        .project-detail-body li {
+            line-height: 1.75;
+            font-size: 17px;
+            color: #36454F;
+        }
+
+        .project-detail-body img {
+            width: 65%;
+            max-width: 500px;
+            border-radius: 18px;
+            margin-bottom: 28px;
+            display: block;
+        }
+
+        .project-detail-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 26px;
+        }
+
+        .project-detail-actions a {
+            display: inline-block;
+            background-color: #808000;
+            color: white;
+            text-decoration: none;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: #36454F;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-message {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 18px;
+            color: #36454F;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        @media (max-width: 900px) {
+            .project-detail-head,
+            .project-detail-body {
+                padding: 24px;
+            }
+
+            .project-detail-meta {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Skatersthinkph</div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Browse Projects</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tos.html">Terms of Service</a></li>
+            <button><a href="publish.html">Publish</a></button>
+            <button><a href="donate.html">Support Us</a></button>
+        </ul>
+    </nav>
+
+    <main class="project-detail">
+        <a href="projects.html" class="back-link">← Back to projects</a>
+        <div id="project-message" class="project-message">Loading project...</div>
+        <div id="project-root"></div>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get('id');
+        const messageEl = document.getElementById('project-message');
+        const rootEl = document.getElementById('project-root');
+
+        const fetchJson = (url) => fetch(url).then((response) => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        });
+
+        const renderProject = (project) => {
+            document.title = `${project.title || 'Project Detail'} | Skatersthinkph`;
+            messageEl.style.display = 'none';
+            const header = document.createElement('section');
+            header.className = 'project-detail-head';
+
+            const title = document.createElement('h1');
+            title.textContent = project.title || 'Untitled project';
+            header.appendChild(title);
+
+            if (project.category) {
+                const category = document.createElement('p');
+                category.textContent = project.category;
+                header.appendChild(category);
+            }
+
+            const meta = document.createElement('div');
+            meta.className = 'project-detail-meta';
+
+            const author = document.createElement('span');
+            author.textContent = `Author: ${project.author || 'Unknown'}`;
+            meta.appendChild(author);
+
+            const fundType = document.createElement('span');
+            fundType.textContent = `Fund type: ${project.fundType || 'N/A'}`;
+            meta.appendChild(fundType);
+
+            const fundingPercent = document.createElement('span');
+            fundingPercent.textContent = `${project.fundingPercent || 0}% Funded`;
+            meta.appendChild(fundingPercent);
+
+            header.appendChild(meta);
+            rootEl.appendChild(header);
+
+            const body = document.createElement('section');
+            body.className = 'project-detail-body';
+
+            if (project.imageUrl) {
+                const image = document.createElement('img');
+                image.src = project.imageUrl;
+                image.alt = project.title || 'Project image';
+                body.appendChild(image);
+            }
+
+            const content = document.createElement('div');
+            content.innerHTML = project.pageHtml || project.detailsHtml || `<p>${project.description || 'No description available.'}</p>`;
+            body.appendChild(content);
+
+            const actions = document.createElement('div');
+            actions.className = 'project-detail-actions';
+
+            if (project.projectUrl) {
+                const viewLink = document.createElement('a');
+                viewLink.href = project.projectUrl;
+                viewLink.textContent = 'Open project page';
+                viewLink.target = '_blank';
+                actions.appendChild(viewLink);
+            }
+
+            if (project.donateUrl) {
+                const donateLink = document.createElement('a');
+                donateLink.href = project.donateUrl;
+                donateLink.textContent = 'Donate';
+                donateLink.target = '_blank';
+                actions.appendChild(donateLink);
+            }
+
+            body.appendChild(actions);
+            rootEl.appendChild(body);
+        };
+
+        const renderError = (message) => {
+            messageEl.textContent = message;
+            messageEl.style.display = 'block';
+            rootEl.innerHTML = '';
+        };
+
+        if (!projectId) {
+            renderError('No project selected. Open a project from the projects page.');
+        } else {
+            fetchJson('./projects-data.json')
+                .catch(() => fetchJson('https://raw.githubusercontent.com/InQuintessence/Skatersthinkph/main/projects-data.json'))
+                .then((projects) => {
+                    if (!Array.isArray(projects)) throw new Error('Invalid project data');
+                    const project = projects.find((item) => item.id === projectId);
+                    if (!project) {
+                        renderError('Project not found. Please go back to the projects page.');
+                        return;
+                    }
+                    renderProject(project);
+                })
+                .catch((error) => {
+                    renderError('Failed to load project data.');
+                    console.error('Project detail load error:', error);
+                });
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Skatersthinkph. All rights reserved.</p>
+    </footer>
+</body>
+</html>
