@@ -4,6 +4,7 @@
     "title": "Quantum Computing Advances",
     "category": "Research and Journals",
     "description": "Exploring the next generation of quantum algorithms for scalable computation.",
+    "detailsHtml": "<p>This project explores new quantum algorithms and how they can scale computation across multiple qubits.</p><ul><li>Research overview</li><li>Expected benefits</li></ul>",
     "fundingPercent": 75,
     "author": "placeholder",
     "fundType": "Funds to Support Product",
@@ -31,9 +32,9 @@
     "fundingPercent": 42,
     "author": "placeholder",
     "fundType": "Funds to Support Founder",
-    "imageUrl": "https://placehold.co/600x400?text=Ocean+Acidification",
-    "projectUrl": "https://example.com/project/ocean-acidification-study",
-    "donateUrl": "https://example.com/donate/ocean-acidification-study"
+    "imageUrl": "https://placehold.co/600x400?text=Microplastics+in+Rainwater",
+    "projectUrl": "https://example.com/project/microplastics-rainwater-study",
+    "donateUrl": "https://example.com/donate/microplastics-rainwater-study"
   },
   {
     "id": "smart-water-purifier",
