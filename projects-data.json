@@ -4,7 +4,7 @@
     "title": "Quantum Computing Advances",
     "category": "Research and Journals",
     "description": "Exploring the next generation of quantum algorithms for scalable computation.",
-    "detailsHtml": "<p>This project explores new quantum algorithms and how they can scale computation across multiple qubits.</p><ul><li>Research overview</li><li>Expected benefits</li></ul>",
+    "pageHtml": "<section><h2>Quantum Computing Advances</h2><p>This project explores how next-generation quantum algorithms can make large-scale computation more practical for emerging hardware.</p><h3>Project overview</h3><p>The work focuses on algorithm design, error reduction, and improving performance for medium-sized quantum systems.</p><h3>Why it matters</h3><p>These advances can enable new scientific simulations and optimization problems that classical computers struggle to solve.</p></section>",
     "fundingPercent": 75,
     "author": "placeholder",
     "fundType": "Funds to Support Product",
